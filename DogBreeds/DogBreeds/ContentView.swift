@@ -43,12 +43,12 @@ struct HomeScreenView: View {
 
 struct DogBreedsView: View {
     var body: some View {
-        Text("Home Screen")
+        Text("Coming Soon!")
     }
 }
 
 struct RandomDogView: View {
     var body: some View {
-        Text("Home Screen")
+        Text("Coming Soon!")
     }
 }
