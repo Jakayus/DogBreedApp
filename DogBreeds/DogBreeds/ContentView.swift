@@ -8,17 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    enum Tab {
+        case Home, DogBreeds, RandomDog
+    }
+    
+    @State private var tabSelection = Tab.Home
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $tabSelection){
+            HomeScreenView()
+                .tabItem { Label("Home", systemImage: "house") }
+                .tag(Tab.Home)
+            DogBreedsView()
+                .tabItem { Label("Dog Breeds", systemImage: "dog") }
+                .tag(Tab.DogBreeds)
+            RandomDogView()
+                .tabItem { Label("Random Dog", systemImage: "photo")}
+                .tag(Tab.RandomDog)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+
+struct HomeScreenView: View {
+    var body: some View {
+        Text("Home Screen")
+    }
+}
+
+struct DogBreedsView: View {
+    var body: some View {
+        Text("Home Screen")
+    }
+}
+
+struct RandomDogView: View {
+    var body: some View {
+        Text("Home Screen")
+    }
 }
