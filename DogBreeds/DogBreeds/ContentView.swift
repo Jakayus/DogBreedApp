@@ -26,9 +26,9 @@ struct ContentView: View {
                 DogBreedsView()
                     .tabItem { Label("Dog Breeds", systemImage: "dog") }
                     .tag(Tab.DogBreeds)
-                RandomDogView()
-                    .tabItem { Label("Random Dog", systemImage: "photo")}
-                    .tag(Tab.RandomDog)
+//                RandomDogView()
+//                    .tabItem { Label("Random Dog", systemImage: "photo")}
+//                    .tag(Tab.RandomDog)
             }
         }
     }
@@ -41,19 +41,24 @@ struct ContentView: View {
 
 struct HomeScreenView: View {
     var body: some View {
-        ZStack {
             VStack {
-                Text("test")
-                Image("dog3")
-                Text("DOG BREEDS")
-                .padding(.bottom, 50)
-                Image("Hero_Image")
+                Image(.header)
+                    .padding(.top)
+                Spacer()
+                Image(.hero)
                     .resizable()
                     .scaledToFit()
-                Text("Can you recognize differnet dog breeds?")
-                    .font(.title)
+                VStack(spacing: 20){
+                    Text("Can you recognize differnet dog breeds?")
+                        .font(.largeTitle)
+                        .padding()
+                    Text("")
+                        .font(.headline)
+                        .padding()
+                }
+                Spacer()
             }
-        }
+        
     }
 }
 
