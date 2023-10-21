@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     
     enum Tab {
@@ -16,16 +17,19 @@ struct ContentView: View {
     @State private var tabSelection = Tab.Home
     
     var body: some View {
-        TabView(selection: $tabSelection){
-            HomeScreenView()
-                .tabItem { Label("Home", systemImage: "house") }
-                .tag(Tab.Home)
-            DogBreedsView()
-                .tabItem { Label("Dog Breeds", systemImage: "dog") }
-                .tag(Tab.DogBreeds)
-            RandomDogView()
-                .tabItem { Label("Random Dog", systemImage: "photo")}
-                .tag(Tab.RandomDog)
+        ZStack {
+            Color.blue
+            TabView(selection: $tabSelection){
+                HomeScreenView()
+                    .tabItem { Label("Home", systemImage: "house") }
+                    .tag(Tab.Home)
+                DogBreedsView()
+                    .tabItem { Label("Dog Breeds", systemImage: "dog") }
+                    .tag(Tab.DogBreeds)
+                RandomDogView()
+                    .tabItem { Label("Random Dog", systemImage: "photo")}
+                    .tag(Tab.RandomDog)
+            }
         }
     }
 }
@@ -37,7 +41,19 @@ struct ContentView: View {
 
 struct HomeScreenView: View {
     var body: some View {
-        Text("Home Screen")
+        ZStack {
+            VStack {
+                Text("test")
+                Image("dog3")
+                Text("DOG BREEDS")
+                .padding(.bottom, 50)
+                Image("Hero_Image")
+                    .resizable()
+                    .scaledToFit()
+                Text("Can you recognize differnet dog breeds?")
+                    .font(.title)
+            }
+        }
     }
 }
 

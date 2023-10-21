@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4B6F472AE4784A0065B65F /* ProjectNotes in Resources */ = {isa = PBXBuildFile; fileRef = DC4B6F462AE4784A0065B65F /* ProjectNotes */; };
 		DC9A5CC52AE4503F009D6D76 /* DogBreedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A5CC42AE4503F009D6D76 /* DogBreedsApp.swift */; };
 		DC9A5CC72AE4503F009D6D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9A5CC62AE4503F009D6D76 /* ContentView.swift */; };
 		DC9A5CC92AE45040009D6D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9A5CC82AE45040009D6D76 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC4B6F462AE4784A0065B65F /* ProjectNotes */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProjectNotes; sourceTree = "<group>"; };
 		DC9A5CC12AE4503F009D6D76 /* DogBreeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogBreeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9A5CC42AE4503F009D6D76 /* DogBreedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedsApp.swift; sourceTree = "<group>"; };
 		DC9A5CC62AE4503F009D6D76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		DC9A5CB82AE4503F009D6D76 = {
 			isa = PBXGroup;
 			children = (
+				DC4B6F462AE4784A0065B65F /* ProjectNotes */,
 				DC9A5CC32AE4503F009D6D76 /* DogBreeds */,
 				DC9A5CC22AE4503F009D6D76 /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4B6F472AE4784A0065B65F /* ProjectNotes in Resources */,
 				DC9A5CCC2AE45040009D6D76 /* Preview Assets.xcassets in Resources */,
 				DC9A5CC92AE45040009D6D76 /* Assets.xcassets in Resources */,
 			);
