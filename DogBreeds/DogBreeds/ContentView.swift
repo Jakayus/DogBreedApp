@@ -38,8 +38,9 @@ struct ContentView: View {
 struct HomeScreenView: View {
     
     @State private var dogImageURLString = ""
+    @State private var firstStartUp = true
+
     let defaultDogURLString = "https://images.dog.ceo/breeds/segugio-italian/n02090722_002.jpg"
-    
     let heroMessage = "Can you recognize different dog breeds?"
     let heroSubMessage = "Search for breeds and see pictures for familiarity. Or simply tap the button below for a random dog image!"
     
@@ -74,19 +75,26 @@ struct HomeScreenView: View {
                         
                     } else if phase.error != nil {
                         Label("Could not load image", systemImage: "photo")
-                            .foregroundColor(Color(.primary1))
+                            .foregroundColor(Color.primary)
                     } else {
-                        ProgressView("Loading...")
-                            .foregroundColor(Color.white)
-                            .tint(Color.white)
+                        if !firstStartUp {
+                            ProgressView("Loading...")
+                                .foregroundColor(Color.primary)
+                        } else {
+                            EmptyView()
+                        }
                         
+
                     }
                 }// end AsyncImage
                 
                 Button {
                     grabRandomDogImageURL()
+                    firstStartUp = false
                 } label: {
+                    
                     Text("Next Dog 🐶")
+                        .foregroundStyle(Color.primary)
                         .frame(maxWidth: 150)
                 }
                 .buttonStyle(.bordered)
@@ -97,7 +105,10 @@ struct HomeScreenView: View {
             
 
             Spacer()
-        }
+        } // end ScrollView
+      //  .onAppear{ grabRandomDogImageURL() }
+        
+        
     } // end View
         
         func grabRandomDogImageURL() {
