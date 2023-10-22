@@ -44,10 +44,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC4B6F482AE4EB7D0065B65F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DC9A5CC42AE4503F009D6D76 /* DogBreedsApp.swift */,
+				DC9A5CC62AE4503F009D6D76 /* ContentView.swift */,
+				DC92C8182AE4A98E00363650 /* HomeScreenView.swift */,
+				DC92C8202AE4B01F00363650 /* HeroSectionView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DC4B6F492AE4EB910065B65F /* RandomDogImage */ = {
+			isa = PBXGroup;
+			children = (
+				DC92C81C2AE4AA8700363650 /* DogData.swift */,
+				DC92C81E2AE4AFF000363650 /* RandomDogImageView.swift */,
+			);
+			path = RandomDogImage;
+			sourceTree = "<group>";
+		};
+		DC4B6F4A2AE4EBC20065B65F /* SearchDogBreeds */ = {
+			isa = PBXGroup;
+			children = (
+				DC92C81A2AE4AA5000363650 /* DogBreedsView.swift */,
+			);
+			path = SearchDogBreeds;
+			sourceTree = "<group>";
+		};
+		DC4B6F4B2AE4EBD20065B65F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC9A5CC82AE45040009D6D76 /* Assets.xcassets */,
+				DC4B6F462AE4784A0065B65F /* ProjectNotes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DC9A5CB82AE4503F009D6D76 = {
 			isa = PBXGroup;
 			children = (
-				DC4B6F462AE4784A0065B65F /* ProjectNotes */,
 				DC9A5CC32AE4503F009D6D76 /* DogBreeds */,
 				DC9A5CC22AE4503F009D6D76 /* Products */,
 			);
@@ -64,14 +100,10 @@
 		DC9A5CC32AE4503F009D6D76 /* DogBreeds */ = {
 			isa = PBXGroup;
 			children = (
-				DC9A5CC42AE4503F009D6D76 /* DogBreedsApp.swift */,
-				DC9A5CC62AE4503F009D6D76 /* ContentView.swift */,
-				DC92C81C2AE4AA8700363650 /* DogData.swift */,
-				DC92C81A2AE4AA5000363650 /* DogBreedsView.swift */,
-				DC92C8182AE4A98E00363650 /* HomeScreenView.swift */,
-				DC92C8202AE4B01F00363650 /* HeroSectionView.swift */,
-				DC92C81E2AE4AFF000363650 /* RandomDogImageView.swift */,
-				DC9A5CC82AE45040009D6D76 /* Assets.xcassets */,
+				DC4B6F4B2AE4EBD20065B65F /* Resources */,
+				DC4B6F4A2AE4EBC20065B65F /* SearchDogBreeds */,
+				DC4B6F492AE4EB910065B65F /* RandomDogImage */,
+				DC4B6F482AE4EB7D0065B65F /* Application */,
 				DC9A5CCA2AE45040009D6D76 /* Preview Content */,
 			);
 			path = DogBreeds;
